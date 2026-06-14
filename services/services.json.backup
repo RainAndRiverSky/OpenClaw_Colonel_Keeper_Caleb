@@ -1,0 +1,12 @@
+[
+  {
+    "name": "HeyDay",
+    "type": "web",
+    "port": 3000
+  },
+  {
+    "name": "Harbor",
+    "type": "scheduler",
+    "process": "harbor-scheduler.js"
+  }
+]

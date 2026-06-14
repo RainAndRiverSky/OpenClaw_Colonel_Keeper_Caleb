@@ -1,0 +1,12 @@
+{
+  "incidentId": "",
+  "service": "",
+  "detectedAt": "",
+  "severity": "",
+  "classification": "",
+  "description": "",
+  "restartAttempted": false,
+  "restartSucceeded": false,
+  "recommendedAction": "",
+  "status": "open"
+}

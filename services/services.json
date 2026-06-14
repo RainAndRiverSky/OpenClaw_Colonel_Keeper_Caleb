@@ -1,0 +1,22 @@
+[
+  {
+    "name": "HeyDay",
+    "type": "web",
+    "port": 3000
+  },
+  {
+    "name": "Harbor",
+    "type": "scheduler",
+    "process": "harbor-scheduler.js"
+  },
+  {
+    "name": "Ayel Discord",
+    "type": "python",
+    "process": "bot.py"
+  },
+  {
+    "name": "Keeper",
+    "type": "script",
+    "process": "keeper-health-check.sh"
+  }
+]
