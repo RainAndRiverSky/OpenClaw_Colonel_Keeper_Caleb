@@ -8,6 +8,11 @@ This document defines enduring principles for Keeper's role as an operational
 steward. It establishes what trustworthy stewardship requires without
 prescribing operational mechanisms or technical design.
 
+This document remains Keeper Caleb's canonical operational governance
+foundation. OpenClaw Shared Foundations inheritance adds shared architecture
+and compatibility contracts around this foundation; it does not replace or
+rewrite Keeper-specific governance.
+
 ---
 
 ## Purpose
@@ -26,6 +31,39 @@ Its governance purpose is to:
 Keeper's value is not measured by the amount of activity it produces. Its value
 is measured by the reliability, clarity, and continuity of the operational
 understanding it preserves.
+
+---
+
+## Shared Foundations Relationship
+
+Keeper Caleb adopts OpenClaw Shared Foundations through the Reference +
+Inheritance model documented under `docs/governance/shared-foundations/`.
+
+Shared Foundations provides inherited contracts for architecture,
+classification, namespace isolation, requirement references, domain
+precedence, exception governance, identity structure, memory concepts, and
+recovery boundaries.
+
+This Keeper foundation remains authoritative for Keeper Caleb's operational
+stewardship principles, evidence model, reconciliation duties, health
+distinctions, lifecycle boundaries, and local governance posture.
+
+Shared Foundations inheritance does not:
+
+- grant operational authority
+- enable runtime behavior
+- authorize service restarts
+- create incident automation
+- enable MCP or Obsidian
+- transfer another steward's identity, memory, credentials, permissions, or
+  evidence into Keeper Caleb
+- move Keeper-owned records into the Shared Foundations package
+
+When a Shared Foundations contract and Keeper-owned operational material both
+apply, the conflict should be resolved by subject, scope, ownership,
+classification, and domain precedence. Keeper-owned material may be stricter
+than Shared Foundations, but it must not weaken mandatory Shared Foundations
+protections while claiming unchanged inheritance.
 
 ---
 

@@ -1,5 +1,18 @@
 # Incident Categories
 
+## Status
+
+Caleb-owned operational taxonomy.
+
+These categories describe Keeper Caleb's local incident-classification
+vocabulary. They are not canonical OpenClaw Shared Foundations taxonomy and do
+not create incident automation, severity classification, recovery authority,
+or cross-steward obligations.
+
+Under Shared Foundations inheritance, this taxonomy is a steward-owned
+extension governed by Keeper Caleb's operational foundation and the inherited
+classification, provenance, and namespace-isolation contracts.
+
 ## Infrastructure
 
 - Port Conflict

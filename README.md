@@ -129,16 +129,34 @@ Its foundational statement is:
 > Keeper watches carefully, records faithfully, distinguishes clearly,
 > reconciles continuously, and preserves accountability.
 
+### Shared Foundations Inheritance
+
+Keeper Caleb adopts OpenClaw Shared Foundations as a governance and
+compatibility layer using the Reference + Inheritance model.
+
+The Shared Foundations adoption records are under
+[`docs/governance/shared-foundations/`](docs/governance/shared-foundations/).
+They reference the canonical Shared Foundations repository rather than copying
+Foundation documents into this repository.
+
+Shared Foundations inheritance does not replace
+`KEEPER_OPERATIONAL_FOUNDATIONS_v0.1.md`, grant runtime authority, enable
+incident automation, authorize recovery actions, enable MCP or Obsidian, or
+permit cross-steward sharing. Keeper-specific governance, operational
+evidence, scripts, reports, and service records remain Caleb-owned.
+
 ## Repository Structure
 
 ```text
 OpenClaw_Operations_Keeper_Bot/
 ├── docs/
 │   ├── governance/        Operational governance foundations
+│   │   └── shared-foundations/
+│   │                       Shared Foundations adoption and inheritance records
 │   └── handoffs/          Historical milestone and maturity records
 ├── failure-patterns/      Reserved for recurring failure knowledge
 ├── health-history/        Reserved historical health area
-├── identity/              Incident categories and escalation boundaries
+├── identity/              Steward identity, incident categories, and escalation boundaries
 ├── incidents/             Incident record schema
 ├── reports/
 │   ├── comparisons/       Archived change reports
@@ -156,13 +174,17 @@ OpenClaw_Operations_Keeper_Bot/
 ### Major Directories
 
 `docs/governance/` contains the active operational governance foundation.
+`docs/governance/shared-foundations/` contains Caleb-owned records that map
+Keeper to OpenClaw Shared Foundations without copying canonical Foundation
+documents.
 
 `docs/handoffs/` preserves project decisions, completed milestones, validation
 results, maturity assessments, and approved next-step candidates.
 
-`identity/` defines the incident classification vocabulary and the escalation
-model. These files describe intended governance boundaries; their recovery and
-escalation actions are not implemented by the current scripts.
+`identity/` defines Keeper Caleb's local steward identity, incident
+classification vocabulary, and escalation model. These files describe intended
+governance boundaries; their recovery and escalation actions are not
+implemented by the current scripts.
 
 `incidents/` contains the JSON shape reserved for future incident records. No
 incident instances are currently generated.
@@ -313,18 +335,26 @@ Keeper to:
 
 Supporting governance artifacts include:
 
+- [`identity/KEEPER_STEWARD_IDENTITY_v0.1.md`](identity/KEEPER_STEWARD_IDENTITY_v0.1.md)
+  for the Caleb-owned steward identity spine
 - [`identity/incident_categories.md`](identity/incident_categories.md) for the
   current failure-classification vocabulary
 - [`identity/escalation_rules.md`](identity/escalation_rules.md) for intended
   escalation boundaries
 - [`incidents/incident-template.json`](incidents/incident-template.json) for
   the reserved incident record shape
+- [`docs/governance/shared-foundations/`](docs/governance/shared-foundations/)
+  for Shared Foundations adoption, inheritance, and exception records
 - [`docs/handoffs/`](docs/handoffs/) for milestone evidence and maturity
   decisions
 
 Keeper's governance role is to preserve trustworthy operational awareness. It
 does not convert observation into decision authority, and it does not govern
 discovery or commerce.
+
+Shared Foundations provides shared architecture, classification, precedence,
+namespace, exception, and inheritance contracts. Keeper Caleb inherits those
+contracts by reference while preserving independent operational governance.
 
 ## OpenClaw Ecosystem
 
@@ -357,6 +387,7 @@ Keeper has completed the following foundations:
 | Status Detection | Implemented |
 | Operational Stewardship | Defined |
 | Governance Foundations | Established |
+| Shared Foundations adoption | Documented through Reference + Inheritance |
 | Operational Foundations acceptance readiness | Ready for review |
 | Runtime responsibility discovery | Not yet completed |
 
@@ -388,6 +419,7 @@ Current non-capabilities include:
 - cause analysis
 - automated recovery
 - AI reasoning
+- Shared Foundations compatibility status tracking
 - runtime interaction with Xavier or Zayne
 - dynamic execution from the service registry
 
@@ -411,6 +443,12 @@ review.
 Create a governed status record for Keeper's foundation, acceptance state, open
 actions, and unresolved governance matters.
 
+### Shared Foundations Compatibility Status Tracking
+
+Create a governed status record for Caleb's Shared Foundations compatibility
+assessment when that work is explicitly approved. The current integration
+documents adoption, inheritance, and exceptions only.
+
 ### Runtime Integration Reconnaissance
 
 Investigate Keeper's actual responsibilities inside the future OpenClaw
@@ -429,11 +467,14 @@ with Keeper's operational boundaries.
 ### Before Changing Behavior
 
 1. Read the operational foundation under `docs/governance/`.
-2. Review the relevant milestone records under `docs/handoffs/`.
-3. Inspect the active script and its current report examples.
-4. Confirm whether the change affects authoritative evidence, a current view,
+2. Review the Shared Foundations adoption records under
+   `docs/governance/shared-foundations/` when the change affects governance,
+   identity, inheritance, classification, or cross-steward boundaries.
+3. Review the relevant milestone records under `docs/handoffs/`.
+4. Inspect the active script and its current report examples.
+5. Confirm whether the change affects authoritative evidence, a current view,
    or a derived comparison.
-5. Back up the active file before risky edits.
+6. Back up the active file before risky edits.
 
 The established maintenance discipline is:
 
