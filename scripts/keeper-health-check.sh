@@ -13,43 +13,47 @@ echo "=== Keeper Health Check ==="
 echo "Time: $TIMESTAMP"
 echo ""
 
-echo "[HeyDay]"
+jq -c '.[]' services/services.json | while read -r SERVICE
+do
+  NAME=$(echo "$SERVICE" | jq -r '.name')
+  TYPE=$(echo "$SERVICE" | jq -r '.type')
+  PROCESS=$(echo "$SERVICE" | jq -r '.process // empty')
+  PORT=$(echo "$SERVICE" | jq -r '.port // empty')
 
-if lsof -i :3000 > /dev/null 2>&1
-then
-  echo "STATUS: ONLINE"
-else
-  echo "STATUS: OFFLINE"
-fi
+  echo "[$NAME]"
 
-echo ""
+  STATUS="OFFLINE"
 
-echo "[Harbor]"
+  if [ "$NAME" = "Keeper" ]
+  then
+    STATUS="ONLINE"
+  else
+    case "$TYPE" in
+      process)
+        if pgrep -f "$PROCESS" > /dev/null 2>&1
+        then
+          STATUS="ONLINE"
+        fi
+        ;;
+      script)
+        if pgrep -f "$PROCESS" > /dev/null 2>&1
+        then
+          STATUS="ONLINE"
+        fi
+        ;;
+      port)
+        if lsof -i :"$PORT" > /dev/null 2>&1
+        then
+          STATUS="ONLINE"
+        fi
+        ;;
+    esac
+  fi
 
-if pgrep -f "harbor-scheduler.js" > /dev/null
-then
-  echo "STATUS: ONLINE"
-else
-  echo "STATUS: OFFLINE"
-fi
+  echo "STATUS: $STATUS"
+  echo ""
+done
 
-echo ""
-
-echo "[Ayel Discord]"
-
-if pgrep -f "bot.py" > /dev/null
-then
-  echo "STATUS: ONLINE"
-else
-  echo "STATUS: OFFLINE"
-fi
-
-echo ""
-
-echo "[Keeper]"
-echo "STATUS: ONLINE"
-
-echo ""
 echo "=== End Report ==="
 
 } | tee "$REPORT_FILE" | tee "$HISTORY_FILE"
