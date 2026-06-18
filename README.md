@@ -199,9 +199,11 @@ health reports.
 `.before-keeper` or `.phase2a4b-backup` are historical backups, not active
 entry points.
 
-`services/services.json` records the currently recognized service inventory
-and service-check metadata. The active health-check script currently defines
-its checks directly and does not load this file dynamically.
+`services/services.json` is the authoritative service inventory and source of
+observation metadata. `scripts/keeper-health-check.sh` consumes this registry
+directly, using each service's metadata to determine how that service is
+checked. The registry and observation workflow remain aligned through this
+single source of truth.
 
 `failure-patterns/` and `health-history/` are currently empty and do not
 provide active capabilities.
