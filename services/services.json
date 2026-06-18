@@ -1,18 +1,18 @@
 [
   {
-    "name": "HeyDay",
-    "type": "web",
-    "port": 3000
+    "name": "OpenClaw Runtime",
+    "type": "process",
+    "process": "openclaw-runtime"
   },
   {
-    "name": "Harbor",
-    "type": "scheduler",
-    "process": "harbor-scheduler.js"
+    "name": "OpenClaw Scheduler",
+    "type": "process",
+    "process": "openclaw-scheduler"
   },
   {
-    "name": "Ayel Discord",
-    "type": "python",
-    "process": "bot.py"
+    "name": "OpenClaw Communications",
+    "type": "process",
+    "process": "openclaw-communications"
   },
   {
     "name": "Keeper",

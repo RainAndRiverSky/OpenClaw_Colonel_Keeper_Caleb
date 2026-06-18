@@ -76,7 +76,7 @@ For services present in both reports, it records transitions where the status
 changed, such as:
 
 ```text
-Ayel Discord
+OpenClaw Runtime
 OFFLINE → ONLINE
 ```
 
@@ -84,9 +84,9 @@ The current health workflow observes:
 
 | Service | Current check |
 | --- | --- |
-| HeyDay | Whether port `3000` is in use |
-| Harbor | Whether a process matching `harbor-scheduler.js` exists |
-| Ayel Discord | Whether a process matching `bot.py` exists |
+| OpenClaw Runtime | Whether a configured runtime process is observable |
+| OpenClaw Scheduler | Whether a configured scheduler process is observable |
+| OpenClaw Communications | Whether a configured communications process is observable |
 | Keeper | Reported online by the executing health-check script |
 
 These are narrow operational observations. They do not establish readiness,
@@ -216,7 +216,7 @@ paths.
 - Bash with process-substitution support
 - standard Unix utilities: `awk`, `comm`, `find`, `grep`, `join`, `ls`,
   `pgrep`, `sed`, `sort`, `tee`, and `tr`
-- `lsof` for the HeyDay port observation
+- `lsof` when port-based observations are configured
 
 ### Health Checks
 
