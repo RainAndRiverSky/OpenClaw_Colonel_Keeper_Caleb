@@ -218,6 +218,7 @@ paths.
 - Bash with process-substitution support
 - standard Unix utilities: `awk`, `comm`, `find`, `grep`, `join`, `ls`,
   `pgrep`, `sed`, `sort`, `tee`, and `tr`
+- `jq`
 - `lsof` when port-based observations are configured
 
 ### Health Checks
@@ -423,7 +424,7 @@ Current non-capabilities include:
 - AI reasoning
 - Shared Foundations compatibility status tracking
 - runtime interaction with Xavier or Zayne
-- dynamic execution from the service registry
+- autonomous service onboarding
 
 ## Roadmap
 
