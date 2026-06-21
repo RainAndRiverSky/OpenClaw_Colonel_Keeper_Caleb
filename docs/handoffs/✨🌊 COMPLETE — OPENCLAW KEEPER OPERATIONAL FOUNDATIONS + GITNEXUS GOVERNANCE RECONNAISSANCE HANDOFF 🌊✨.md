@@ -143,7 +143,7 @@ Keeper Operational Foundations reached governance-review readiness.
 
 Repository Reviewed:
 
-/Volumes/1T_Projects/To use with Open Claw/GitNexus-main
+<GITNEXUS_SOURCE_ROOT>
 
 Purpose:
 
@@ -272,11 +272,11 @@ Primary Question:
 
 Potential Investigation Targets:
 
-/Volumes/1T_Projects/To use with Open Claw/MCPs
+<MCP_SOURCE_ROOT>
 
-/Volumes/1T_Projects/To use with Open Claw/Agents
+<AGENT_SOURCE_ROOT>
 
-/Volumes/1T_Projects/OpenClaw_Runtime
+<OPENCLAW_RUNTIME_ROOT>
 
 Purpose:
 

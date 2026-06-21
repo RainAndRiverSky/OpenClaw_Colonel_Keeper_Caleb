@@ -33,7 +33,7 @@ Repository Path Reviewed
 
 Repository:
 
-/Volumes/1T_Projects/Projects/OpenClaw_Operations_Keeper_Bot
+<REPOSITORY_ROOT>
 
 Branch:
 

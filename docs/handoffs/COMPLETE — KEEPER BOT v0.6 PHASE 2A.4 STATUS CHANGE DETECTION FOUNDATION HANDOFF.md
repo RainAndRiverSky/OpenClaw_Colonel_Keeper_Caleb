@@ -20,7 +20,7 @@ Project:
 OpenClaw Operations Keeper Bot
 
 Repository:
-/Volumes/1T_Projects/Projects/OpenClaw_Operations_Keeper_Bot
+<REPOSITORY_ROOT>
 
 ────────────────────────────────────
 
