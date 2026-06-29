@@ -166,8 +166,9 @@ OpenClaw_Operations_Keeper_Bot/
 │   ├── keeper-health-check.sh
 │   ├── keeper-compare.sh
 │   └── keeper-summary.sh
+├── evidence/              Portability audit and publication evidence archives
 ├── services/
-│   └── services.json      Descriptive service registry
+│   └── services.json      Authoritative service registry
 └── README.md
 ```
 
@@ -204,6 +205,9 @@ observation metadata. `scripts/keeper-health-check.sh` consumes this registry
 directly, using each service's metadata to determine how that service is
 checked. The registry and observation workflow remain aligned through this
 single source of truth.
+
+`evidence/` preserves portability audit records and publication readiness
+evidence produced during governance review cycles.
 
 `failure-patterns/` and `health-history/` are currently empty and do not
 provide active capabilities.
@@ -388,6 +392,7 @@ Keeper has completed the following foundations:
 | Evidence Archive | Implemented |
 | Change Identification | Implemented |
 | Status Detection | Implemented |
+| Registry Consumption Foundation | Implemented |
 | Operational Stewardship | Defined |
 | Governance Foundations | Established |
 | Shared Foundations adoption | Documented through Reference + Inheritance |
